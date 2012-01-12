@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link media="screen" href="/static/style.css" type="text/css" rel="stylesheet">
+  <title>{% block title %}{% endblock %}</title>
+  {% block head %}{% endblock %}
+</head>
+<body>
+  <div id="header">
+    <a href="/">Home</a>
+    <h2>{% block heading %}{% endblock %}</h2>
+  </div>
+{% if message %}
+  <div id="message">{{ message }}</div>
+{% endif %}
+
+  <div id="content">
+    {% block content %}
+    {% endblock %}
+  </div>
+  <br/>
+  <div id="footer">
+Sample application by <a href="http://www.supernifty.com.au/">Supernifty</a>. 
+  </div>
+</body>
+</html>

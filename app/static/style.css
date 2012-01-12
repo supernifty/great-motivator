@@ -1,0 +1,32 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+#header {
+}
+
+#footer {
+  background-color: #ccf;
+  padding: 8px;
+}
+
+#message {
+  background-color: #fcc;
+  padding: 8px;
+}
+
+#sell_form {
+  background-color: #eee;
+}
+
+label {
+  width: 5em;
+  float: left;
+}
+
+#history {
+}
+
+#log {
+  color: #aaa;
+}

@@ -1,0 +1,20 @@
+{% extends "base.htm" %}
+
+{% block title %}Great Motivator{% endblock %}
+{% block heading %}Great Motivator{% endblock %}
+
+{% block head %}
+{% endblock %}
+
+{% block content %}
+<h2>Set a goal</h2>
+<form action="/goal" method="post">
+<table>
+<tr><td>Name of Goal: </td><td><input type="text" name="name"/><br/>
+<tr><td>Target Word Count: </td><td><input type="text" name="count"/></td></tr>
+<tr><td>Motivator ($): </td><td><input type="text" name="amount"/></td></tr>
+<tr><td>Target Date (m/d/y): </td><td><input type="text" name="date"/></td></tr>
+<tr><td><input type="submit"/></td></tr>
+</table>
+</form>
+{% endblock %}

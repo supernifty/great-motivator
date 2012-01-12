@@ -1,0 +1,32 @@
+{% extends "base.htm" %}
+
+{% block title %}Great Motivator{% endblock %}
+{% block heading %}Great Motivator{% endblock %}
+
+{% block head %}
+{% endblock %}
+
+{% block content %}
+<h2>Welcome to the great motivator</h2>
+{% if profile.goal_active %}
+<p>
+Your current goal is to complete <b>{{ profile.goal_count }} words</b> by <b>{{ profile.goal_date }}</b>.<br/>
+Otherwise, the cost will be <b>${{ profile.amount_dollars }}</b>.
+</p>
+<p>
+So far, you have entered <b>{{ profile.current_count }} words</b>. <a href="/words">View</a>
+</p>
+<p>
+<b>Add to your literary masterpiece</b><br/>
+<form method="post" action="/">
+<textarea name="words" style="width: 100%; height: 240px;">
+</textarea>
+<input type="submit" value="Add to masterpiece"/>
+</form>
+</p>
+{% else %}
+<p>
+You haven't set a goal. <a href="/goal">Set a goal</a>.
+</p>
+{% endif %}
+{% endblock %}
